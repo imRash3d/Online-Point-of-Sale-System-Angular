@@ -18,3 +18,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Live Link: https://possystemdemo.firebaseapp.com
 
+##Admin Panel Login :
+email: rashed@gmail.com
+password: 1234567
