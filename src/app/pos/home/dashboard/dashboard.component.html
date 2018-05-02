@@ -1,0 +1,134 @@
+<div class="container mt-5 mb-5 ">
+  <div class="row  justify-content-center">
+    <div class="col-md-4 ">
+      <div class="card product-box">
+        <div class="card-body">
+            <div class="icon"><i class="fas fa-shopping-basket"></i></div>
+            <div class="text">
+                <h4>Total Products <br>
+                
+              {{totalproduct}}   
+              </h4>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="card s-product-box">
+        <div class="card-body">
+            <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="text">
+                <h4>Sold Products <br>
+                
+             {{totalsoldProduct}}
+              </h4>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="card r-product-box ">
+        <div class="card-body">
+            <div class="icon"><i class="far fa-money-bill-alt"></i></div>
+            <div class="text">
+                <h4> Revinue <br>
+                
+               $  300
+              </h4>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5  "> 
+    <div class="col-md-7 product-d">
+      <div class="card">
+        <div class="card-body">
+            <h5>Recent Product (Monthly)</h5>
+            <table class="table  table-sm mt-4 ">
+                <thead> 
+                    <tr >
+                   
+                      <td>Image</td>
+                      <td>Product Name</td>
+                      <td>Quantity</td>
+                      <td>Date</td>
+                      <td>Price</td>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let product of ProductList | paginate: { itemsPerPage: 3, currentPage: p}">
+                      <td><img [src]="product.img" ></td>
+                      <td>{{product.name}}</td>
+                      <td>{{product.quantity}}</td>
+                      <td>{{product.date}}</td>
+                      <td> <b>${{product.price}}</b> </td>
+                     
+                    </tr>
+                
+                  </tbody>
+            </table>
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    
+    </div>
+    <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+              <h5>Revenue Statistics (Monthly)</h5>
+              <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      
+      </div>
+  </div>
+  <div class="row mt-5"> 
+      <div class="col-md-7 product-d">
+          <div class="card">
+            <div class="card-body">
+                <h5>Sales Product (Monthly)</h5>
+                <table class="table  table-sm mt-4 ">
+                    <thead> 
+                        <tr>
+                       
+                          <td>Order Id</td>
+                          <td>Date</td>
+                          <td>Total Quantity</td>
+                          <td>Total Price</td>
+                        
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of saleList | paginate: { itemsPerPage: 3, currentPage: q, id:'q'}">
+                          <td>#{{item.orderid}}</td>
+                          <td>{{item.date}}</td>
+                          <td>{{item.products | count}}</td>
+                          <td> <b>${{item.totalprice}}</b> </td>
+                         
+                        </tr>
+                    
+                      </tbody>
+                </table>
+                <pagination-controls (pageChange)="q = $event" id="q"></pagination-controls>
+            </div>
+          </div>
+        
+        </div>
+      <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+                <h5>Sales Statistics</h5>
+                <div class="row mt-4 mb-4 justify-content-center">
+                  <button (click)="weekly()"class="btn d-btn">Weekly</button>
+                  <button (click)="monthly()" class="btn d-btn">Monthly</button>
+                  <button class="btn d-btn">Yearly</button>
+                </div>
+                <canvas id="saleChart"></canvas>
+            </div>
+          </div>
+        
+        </div>
+    </div>
+</div>

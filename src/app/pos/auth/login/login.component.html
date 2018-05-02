@@ -1,0 +1,22 @@
+<div id="login">
+<div class="container mt-5 pt-5" >
+    <h3 class="text-center"> EASY <br> Pos</h3>
+  <div class="row justify-content-center">
+   
+    <div class="col-md-5 ">
+
+      <form class="login" (ngSubmit)="login(l)" #l=ngForm>
+        <div class="form-group">
+          <input type="email" required  placeholder="Email" name="email" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" required name="password" placeholder="Password" ngModel name="password"class="form-control">
+        </div>
+       <div class="row justify-content-center">
+        <button type="submit" [disabled]="!l.valid" class="btn  btn-blockd d-btn ">Login</button>
+       </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

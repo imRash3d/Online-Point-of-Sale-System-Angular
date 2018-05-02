@@ -1,1 +1,287 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+body {
+    font-family: 'Lato', sans-serif;
+    background: #F5F7FA;
+}
+
+/* primary color code #27ae60 */
+
+nav {
+    height: 95px;
+    background: #16D39A 
+}
+
+.p-details span {
+    
+    float: left;
+    margin-right: 27px;
+   
+}
+.p-details {
+    border-top:1px solid #ccc;
+}
+
+.product .card {
+    height:300px;
+}
+.product img {
+    height:190px;
+}
+
+.item-list {
+    min-height: 400px;
+}
+
+.selectitem img {
+    height: 54px;
+    width: 56px;
+    float:left;
+    margin-right: 30px;
+}
+.selectitem .title {
+    margin-top: 3px;
+    width: 295px;
+    float: left;
+    font-size: 1.1em;
+}
+
+.selectitem p {
+    width: 295px;
+}
+
+.selectitem {
+    border-bottom:1px solid #EBEBEB;
+}
+
+.price {
+    float:right;
+    color:#16D39A ;
+}
+
+.outer-div {
+    border: none;
+    padding: 0px;
+    background: #fff;
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+}
+.pricing {
+   
+    background: #fff;
+    padding: 30px;
+
+}
+.pricing p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.selectitem:last-child{
+    border:none;
+}
+
+.save {
+    background: #16D39A;
+    border: 1px solid #16D39A;
+    width: 200px;
+    border-radius: 34px;
+    /* height: 37px; */
+    padding-bottom: 7px;
+}
+
+.product-list, .order-list {
+    background: #fff;
+    padding:30px;
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+    
+}
+
+.product-list img {
+    height:50px;
+    width:50px;
+}
+
+.priceRange li {
+    list-style: none;
+}
+
+.priceRange li input {
+    margin-right:10px;
+}
+
+.priceRange h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.priceRange 
+{
+  
+    padding: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.priceRange  .size .btn {
+    
+        width: 48px;
+        margin: 0 auto;
+        /* height: 35px; */
+        margin-right: 2px;
+}
+
+.yello{
+    background: #f39c12;
+}
+
+
+#addform {
+    background: #fff;
+    padding:30px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.table td{
+    text-transform: capitalize;
+}
+
+.order-list {
+    padding: 30px;
+    padding-bottom: 0;
+    width: 100%;
+border-radius:5px;
+box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+}
+
+.order-list td {
+    padding: 8px 15px;
+}
+
+.btn-o  {
+    width: 150px;
+    /* float: left; */
+    margin: 10px -2px;
+    border-radius: 33px;
+    background: #f39c12;
+    border: #f39c12;
+    color: #fff;
+}
+
+.btn-o:hover {
+    background: #e67e22;
+}
+
+.filter-order .form-group {
+    text-align: center;
+}
+
+.filter-order :active{
+    border: #f39c12;
+}
+
+.card {
+   border:none;
+   border-radius: 0;
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+}
+
+.icon {
+    float: left;
+    padding: 6px;
+    width: 30%;
+    font-size: 43px;
+    color: #fff;
+}
+.text {
+    float: right;
+    padding: 11px 0;
+    width: 70%;
+    text-align: center;
+  
+    color: #fff;
+}
+
+.product-box{
+background: #FF6275;
+}
+
+
+.s-product-box{
+    background: #FF976A;
+    }
+
+
+.r-product-box{
+    background: #10C888;
+    }
+
+    .product-d table td {
+        padding: 15px;
+    }
+
+    .product-d img {
+        height: 30px;
+        width: 40px;
+    }
+
+    .d-btn {
+        height: 27px;
+        font-size: 12px;
+        border-radius: 21px;
+        border: none;
+        padding: 5px 15px;
+    }
+
+    .d-btn:nth-child(1){
+        background: #10C888;
+        color: #fff;
+    }
+    .d-btn:nth-child(2){
+        background: #FF976A;
+        color: #fff;
+    }
+    .d-btn:nth-child(3){
+        background: #FF6275;
+        color: #fff;
+    }
+
+    .filter-wrap {
+        height:780px;
+    }
+
+    .yello{
+        height: 35px;
+    }
+.modal-content {
+    width: 690px;
+}
+
+/* LOGIN ***/
+
+#login {
+    background: url(./assets/img/bg.jpg) rgba(0,0,0,0.5) no-repeat;
+    background-size: cover;
+    height:100vh;
+   
+}
+
+.login {
+    background: #fff;
+    margin-top: 27%;
+    margin-left: 7%;
+    padding: 30px;
+}
+
+.login .btn {
+    width: 200px;
+    margin-top: 15px;
+}
+
+.logout li {
+    color: #fff;
+    list-style: none;
+    cursor: pointer;
+}
+a{
+    color: #fff
+}

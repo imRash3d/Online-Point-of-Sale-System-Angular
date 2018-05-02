@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-9">
+
+      <form id="addform" (ngSubmit)="SubmitData(pform)" #pform="ngForm">
+        <div class="row justify-content-between">
+          <div class="form-group col-md-6">
+            <label>Product Name</label>
+            <input type="text" class="form-control form-control-sm " name="name" ngModel>
+          </div>
+          <div class="form-group col-md-6 mt-3">
+            <select name="category" (change)="selectcategory()"class=" mt-3 form-control form-control-sm " ngModel [(ngModel)]="category">
+             
+              <option value="mobile">Mobile</option>
+              <option value="tshirt">T shirt</option>
+              <option value="poloshirt">Polo Shirt</option>
+              <option value="shoe">Shoe</option>
+              <option value="bag">Bag</option>
+              <option value="cosmetics">cosmetics</option>
+            </select>
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="form-group col-md-4">
+            <label>Quantity</label>
+            <input type="number" class="form-control form-control-sm " name="quantity" ngModel>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Price</label>
+            <input type="number" class="form-control form-control-sm" name="price" ngModel>
+          </div>
+          <div *ngIf="size" class="form-group col-md-4 mt-3">
+              <select name="size" class=" mt-3 form-control form-control-sm " ngModel>
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXl</option>
+              
+              </select>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+        
+          <div class="form-group col-md-6">
+            <label>Product Brand</label>
+            <input type="text" class="form-control form-control-sm" name="brand" ngModel>
+          </div>
+          <div *ngIf="colorshow" class="form-group col-md-6">
+              <label>Product Color</label>
+              <input type="text" class="form-control form-control-sm" name="color" ngModel>
+            </div>
+        </div>
+
+        <div class="row justify-content-between">
+          <input type="hidden"  name="date" ngModel>
+          <div class="form-group col-md-6">
+            <label>Product Img</label>
+            <input type="hidden"  name="img" ngModel>
+            <input type="file" (change)="uploadFile($event)">
+            <div>{{uploadPercent | async}}</div>
+            <div class="" style="height:20px; background:red" [style.width]="uploadPercent | async "></div>
+          </div>
+
+          <div class="form-group col-md-6">
+             
+             <button type="submit" class="btn btn-block yello mt-4"> Submit </button>
+            </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
